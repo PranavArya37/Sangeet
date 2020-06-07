@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="icon" type="image" href="images/book1.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<title>BookStore</title>
+<style>
+body { padding-top:30px; }
+.form-group{margin-bottom:50px;
+}
+</style>
+<script>
+var validationApp = angular.module('validationApp', []);
+validationApp.controller('mainController', function($scope) {
+$scope.submitForm = function() {
+if ($scope.userForm.$valid) {
+alert("Login Successful");
+}
+};
+});
+</script>
+</head>
+<body style="background-image: url(1_YLlZ96J3p8GFkIh1USVMzg.jpeg);background-size: cover;" >
+<div style="background-image: url('images/div11.jpg'); width: 100%; height: 104px; background-repeat: no-repeat; background-size: cover;position: relative;bottom: 30px;">
+<div class="container">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#"><img src="images/imageedit_3_9236938007.png" width="250px" height="100px"></a>
+</div>
+<ul class="nav navbar-nav" style="margin-left: 50px; margin-top: 40px; font-family: verdana;font-size: 18px;">
+<li><a href="index.html">HOME</a></li>
+<li><a href="books.html">BOOKS</a></li>
+<li><a href="vendors.html">VENDORS</a></li>
+<li><a href="tips.html">TIPS</a></li>
+<li><a href="blogs.html">BLOG</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="login.html" style="font-size: 15px;color: black;"><span class="glyphicon glyphicon-log-in"></span><b> Login</b></a></li>
+<li><a href="register.html" style="background-color:#ff471a;font-size: 15px;color: white;border-radius: 15px;"><span class="glyphicon glyphicon-user"></span><b> Register</b></a></li>
+</ul>
+</div>
+</nav>
+</div>
+</div><br>
+<div ng-app="validationApp" ng-controller="mainController" >
+<div class="container" style="height: 350px;background-color: #bfbfbf;margin-bottom: 50px;width: 850px;border-radius: 30px;border: 5px dotted black;">
+<div class="row">
+<h1 class="text-center">Login</h1>
+<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+<form name="userForm" ng-submit="submitForm()" novalidate>
+<div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+<label class="col-md-2 control-label text-right">E-Mail</label>
+<div class="col-md-10 inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input type="email" name="email" class="form-control" ng-model="user.email">
+</div>
+<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" >Enter a valid email.</p>
+</div>
+</div>
+<br><br><br><br>
+<div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+<label class="col-md-2 control-label text-right" >Password</label>
+<div class="col-md-10 inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-send"></i></span>
+<input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="5" ng-maxlength="10">
+</div>
+<p ng-show="userForm.password.$error.minlength" >Password is too short.</p>
+<p ng-show="userForm.password.$error.maxlength">Password is too long.</p>
+</div>
+</div>
+<br>
+<div class="row text-center">
+<button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Login</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background-color:#737373; height: 200px;">
+<div class="container" style="color: white;float: right;position: relative;left: 350px;top:50px;font-size:18px; ">
+FAQ&nbsp;&nbsp;&nbsp;&nbsp;
+PRESS&nbsp;&nbsp;&nbsp;&nbsp;
+AFFILIATES&nbsp;&nbsp;&nbsp;&nbsp;
+ADVERTISE WITH US&nbsp;&nbsp;&nbsp;&nbsp;
+CAMPUS REP PROGRAM<br><br>
+<span style="font-size: 12px;position: relative;left: 490px;">
+<h6 style="color: #e6e6e6;font-size: 14px">Copyright © 2007-2019 BookStore, LLC</h6>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Terms&nbsp;&nbsp;
+Privacy
+</span>
+</div>
+<div><img src="images/book.png" style="position: relative;top: 50px;left: 100px;" width="110px" height="80px"></div>
+<div style="position: relative;top: 70px;left: 120px;">
+<i class="fa fa-facebook" style="font-size:25px;color:white"></i>&nbsp;&nbsp;
+<i class="fa fa-twitter" style="font-size:25px;color:white"></i>&nbsp;&nbsp;
+<i class="fa fa-pinterest-p" style="font-size:25px;color:white"></i>&nbsp;&nbsp;
+<i class="fa fa-google-plus" style="font-size:25px;color:white"></i>&nbsp;&nbsp;
+<i class="fa fa-linkedin" style="font-size:25px;color:white"></i>
+</div>
+</div>
+</body>
+</html>
